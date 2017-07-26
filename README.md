@@ -15,15 +15,15 @@ webpackreactes6 <br>
 npm install antd-mobile --save
 npm install babel-plugin-import --save-dev
 11 安装less css ,loader<br> 
-npm i style-loader css-loader less less-loader svg-sprite-loader--save-dev
+npm i style-loader css-loader less less-loader svg-sprite-loader--save-dev<br> 
 12 设置 webpack 的 resolve 来自动区分 web & native 组件加载。<br> 
 webpack1的写法<br> <br> 
 resolve: {
   modulesDirectories: ['node_modules', path.join(__dirname, '../node_modules')],
   extensions: ['', '.web.js', '.js', '.json'],
-},
+},<br> 
 webpack3的写法<br> 
 resolve: {
         modules: ['node_modules', path.join(__dirname, '../node_modules')],
         extensions: ['.web.js', '.jsx', '.json', '.coffee','.js']
-    }
+    }<br> 
