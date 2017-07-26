@@ -13,7 +13,7 @@ webpackreactes6 <br>
 9 ES7不同阶段语法提案的转码规则（共有4个阶段），选装一个 npm install --save-dev babel-preset-stage-0<br> 
 10 引入蚂蚁金服库<br> 
 npm install antd-mobile --save
-npm install babel-plugin-import --save-dev
+npm install babel-plugin-import --save-dev<br> 
 11 安装less css ,loader<br> 
 npm i style-loader css-loader less less-loader svg-sprite-loader--save-dev<br> 
 12 设置 webpack 的 resolve 来自动区分 web & native 组件加载。<br> 
