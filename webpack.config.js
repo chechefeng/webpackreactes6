@@ -26,16 +26,23 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: "style-loader"
-                    },
-                    {
-                        loader: "css-loader",
-                        options: {
-                            modules: true
-                        }
-                    }
+                use: [ 'style-loader', 'css-loader' ]
+            },
+            {
+                test: /\.less$/,
+                use: [{
+                    loader: "style-loader" // creates style nodes from JS strings
+                }, {
+                    loader: "css-loader" // translates CSS into CommonJS
+                }, {
+                    loader: "less-loader" // compiles Less to CSS
+                }]
+            },
+            {
+                test: /\.(svg)$/i,
+                loader: 'svg-sprite-loader',
+                include: [
+                    require.resolve('antd-mobile').replace(/warn\.js$/, ''),  // 1. 属于 antd-mobile 内置 svg 文件
                 ]
             },
             {
@@ -43,6 +50,9 @@ module.exports = {
                 loader: "babel-loader", // Do not use "use" here
                 options: {
                     // ...
+                    plugins: [
+                        ["import", [{ "style": "css", "libraryName": "antd-mobile" }]]
+                    ],
                     presets: ['react', 'es2015',"stage-1"]
                 }
             }
@@ -50,7 +60,7 @@ module.exports = {
 
     },
     resolve: {
-        // 现在你import文件的时候可以直接使用import Func from './file'，不用再使用import Func from './file.js'
-        extensions: ['.js', '.jsx', '.json', '.coffee']
+        modules: ['node_modules', path.join(__dirname, '../node_modules')],
+        extensions: ['.web.js', '.jsx', '.json', '.coffee','.js']
     }
 };
