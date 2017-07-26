@@ -1,5 +1,6 @@
 # webpackreactes6
-webpackreactes6
+webpackreactes6 
+
 1.创建自己的工程webpackreactes6
 2 cd到 webpackreactes6
 3 npm init初始化生成package.json文件
