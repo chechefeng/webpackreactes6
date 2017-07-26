@@ -1,11 +1,10 @@
 # webpackreactes6
-webpackreactes6 
-
-1.创建自己的工程webpackreactes6
-2 cd到 webpackreactes6
-3 npm init初始化生成package.json文件
-4 安装webpack:npm install webpack --save-dev,
-5 安装webpack-dev-server:npm install webpack-dev-server --save-dev,
+webpackreactes6 <br> 
+1.创建自己的工程webpackreactes6<br> 
+2 cd到 webpackreactes6<br> 
+3 npm init初始化生成package.json文件<br> 
+4 安装webpack:npm install webpack --save-dev,<br> 
+5 安装webpack-dev-server:npm install webpack-dev-server --save-dev,<br> 
 6 安装react核心文件npm install react react-dom --save-dev，
 7 ES2015转码规则 npm install --save-dev babel-preset-es2015
 
